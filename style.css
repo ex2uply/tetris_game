@@ -1,0 +1,31 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    display: flex;
+    gap: 20px;
+}
+
+#game-board {
+    border: 2px solid #333;
+    background-color: #000;
+}
+
+#score-board {
+    color: white;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.controls {
+    color: white;
+    margin-top: 20px;
+}
