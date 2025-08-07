@@ -498,3 +498,22 @@ body {
     max-width: 400px;
     width: 90%;
 }
+
+.game-over-content h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--danger-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.game-over-content p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.game-over-content .btn {
+    margin-top: var(--spacing-lg);
+    width: 100%;
+    max-width: 200px;
+}
