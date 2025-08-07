@@ -1,26 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tetris Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="game-container">
-    <canvas id="game-board" width="300" height="600"></canvas>
-    <div id="score-board">
-        <h2>Score: <span id="score">0</span></h2>
-        <div class="controls">
-            <p>Controls:</p>
-            <p>← → : Move</p>
-            <p>↑ : Rotate</p>
-            <p>↓ : Soft Drop</p>
-            <p>Space : Hard Drop</p>
-            <p>Q/E : Rotate</p>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="header-content">
+          <h1 class="app-title">
+            <i class="fas fa-gamepad"></i>
+            Tetris
+          </h1>
+          <div class="game-stats">
+            <div class="stat-item">
+              <span class="stat-label">Score</span>
+              <span class="stat-value" id="score">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Level</span>
+              <span class="stat-value" id="level">1</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Lines</span>
+              <span class="stat-value" id="lines">0</span>
+            </div>
+          </div>
         </div>
+      </header>
+
+      <main class="game-main">
+        <div class="game-container">
+          <div class="game-board-container">
+            <div class="board-header">
+              <h2>Game Board</h2>
+            </div>
+            <div class="canvas-wrapper">
+              <canvas id="game-board" width="300" height="600"></canvas>
+            </div>
+          </div>
+
+          <div class="game-sidebar">
+            <div class="sidebar-section">
+              <h3 class="section-title">
+                <i class="fas fa-info-circle"></i>
+                Game Info
+              </h3>
+              <div class="next-piece-container">
+                <h4>Next Piece</h4>
+                <canvas id="next-piece" width="120" height="120"></canvas>
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <h3 class="section-title">
+                <i class="fas fa-play-circle"></i>
+                Game Actions
+              </h3>
+              <div class="action-buttons">
+                <button class="btn btn-primary" id="start-btn">
+                  <i class="fas fa-play"></i>
+                  Start Game
+                </button>
+                <button class="btn btn-secondary" id="pause-btn">
+                  <i class="fas fa-pause"></i>
+                  Pause
+                </button>
+                <button class="btn btn-danger" id="reset-btn">
+                  <i class="fas fa-redo"></i>
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-</div>
-<script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
